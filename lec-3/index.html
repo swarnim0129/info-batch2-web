@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        height: 300px;
+        width: 300px;
+        background-color: skyblue;
+        color: white;
+        margin: 50px;
+        position: relative;
+    }
+
+    .box2{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        position: relative;
+        left: 50px;
+        bottom: 0px;
+    }
+
+    /* .screen-size{
+        height: 100vh;
+        width: 100vh;
+        background-color: black;
+    } */
+    .text{
+        position: absolute;
+        top: 0px;
+        color: black;
+    }
+     
+    nav ul li {
+        list-style: none;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 30px;
+    }
+    nav{
+        display: flex;
+        border: 2px solid black;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: beige;
+        border-radius: 34px;
+    }
+    .grid{
+        display: grid;
+        
+        grid-template-columns: 1fr 2fr 1fr 3fr ;
+        gap: 5px;
+        grid-template-rows: 1fr 2fr  3fr;
+    }
+
+    .item{
+        border: 2px solid black;
+    }
+</style>
+<body>
+    <!-- Absolute ,
+    relative ,
+    fixed , -->
+    <nav>
+        <div class="abc">
+            <h3>DJSCE</h3>
+        </div>
+        <div class="">
+            <ul>
+                <li>items1</li>
+                <li>items2</li>
+                <li>items3</li>
+                <li>items4</li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="box">
+        <div class="box2">
+            <p class="text">this is a box</p>
+        </div>
+    </div>
+
+    <!-- <div class="screen-size">
+
+    </div> -->
+
+    <div class="grid">
+        <h2 class="item">Items1</h2>
+        <h2 class="item">Items2</h2>
+        <h2 class="item">Items3</h2>
+        <h2 class="item">Items4</h2>
+        <h2 class="item">Items5</h2>
+        <h2 class="item">Items6</h2>
+        <h2 class="item">Items7</h2>
+        <h2 class="item">Items8</h2>
+        <h2 class="item">Items9</h2>
+        <h2 class="item">Items10</h2>
+    </div>
+
+
+
+</body>
+</html>
