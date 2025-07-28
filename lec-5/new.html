@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<style>
+    .eight_digit{
+        color:white;
+    }
+</style>
+<body>
+
+    <nav class="absolute top-0 w-full flex bg-orange-500 text-white py-2 px-2 justify-between items-center">
+        <div class="flex items-center gap-1">
+            <img src="data:image/png;base64,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"
+
+            class="w-8 rounded-full" alt="">
+            <h3>My Website</h3>
+        </div>
+        <ul class="hidden gap-5 sm:flex">
+            <li>items1</li>
+            <li>items2</li>
+            <li>items3</li>
+        </ul>
+    </nav>
+    <div class="mt-10"></div>
+    <h4>hello</h4>
+    <h4>hello</h4>
+    <h4>hello</h4>
+
+
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-8 gap-2">
+        <div class="bg-red-500 p-4">1</div>
+        <div class="bg-green-500 p-4">2</div>
+        <div class="bg-blue-500 p-4">3</div>
+        <div class="bg-yellow-500 p-4 ">4</div>
+        <div class="bg-purple-500 p-4">5</div>
+        <div class="bg-orange-500 p-4">6</div>
+        <div class="bg-teal-500 p-4">7</div>
+        <div class="bg-indigo-800 p-4 eight_digit">8</div>
+    </div>
+
+    <p class=" sm:text-sm md:text-xl lg:text-5xl sm:text-orange-500 md:text-red-500 lg:text-green-500 xl:text-purple-500 xl:italic">Hello</p>
+
+
+    <button class="bg-gray-400 text-white rounded-md px-3 py-1 shadow-lg cursor-pointer hover:bg-gray-500 transition  duration-900 hover:translate-y-2 hover:rotate-8">Click here</button>
+
+    <input type="text" class="border rounded-lg text-gray-500 px-2 py-1 transition duration-800 hover:scale-120 hover:translate-x-4 hover:-rotate-8">
+    <br>
+    <!-- <p class="animate-bounce">This is a paragraph</p> -->
+
+    <br><br><br><br>
+</body>
+
+</html>
