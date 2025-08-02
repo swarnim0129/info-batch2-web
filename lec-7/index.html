@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<style>
+
+</style>
+<body>
+    DOM -> confirm , alert , prompt <br>
+
+    document.getElementById() <br>
+    document.getElementByClassName()
+    <br>
+    document.getElementByTagName()
+    <br>
+    document.querySelector()
+
+    <br>
+    onClick , onMouseUp , onMouseDown , onKeyUp , onKeyDown
+
+    <p id="para">This is a paragraph</p>
+
+    <h1 class="head">This is a heading 1</h1>
+    <h1 class="head">This is a heading2 </h1>
+    <h1 class="head">This is a heading3</h1>
+    <h1 class="head">This is a headin4</h1>
+    <h1 class="head">This is a heading5</h1>
+
+    <h4 class="head">This is a heading 1</h4>
+    <h4 class="head">This is a heading2 </h4>
+    <h4 class="head">This is a heading3</h4>
+    <h4 class="head">This is a headin4</h4>
+    <h4 class="head">This is a heading5</h4>
+
+    <p class="paragraph" id="pg1">Unique Paragraph1</p>
+    <p class="paragraph" id="pg2">Unique Paragraph2</p>
+    <p class="paragraph" id="pg3">Unique Paragraph3</p>
+    <p class="paragraph" id="pg4">Unique Paragraph4</p>
+    <p class="paragraph" id="pg5">Unique Paragraph5</p>
+
+    
+
+    <input type="button" class="border border-black p-2 rounded-md hover:bg-gray-200" value="Click ME" onclick='clickMe()' >
+
+    <div id="box" class="w-110 h-40 border relative" onmouseenter="entr()" onmouseleave="leave()">
+       <p class="absolute top-1/2 left-1/2">Mouse</p>
+    </div>
+
+    <!-- <div class="" onkeydown="keyIN()" onkeyup="keyOut()">
+        <p>hey</p>
+    </div> -->
+
+    <br>
+    <p id="count">Count : 0</p>
+    <br>
+    <input type="button" class="bg-gray-500 text-white border-md px-2 py-1 rounded-md" value="Increment" onclick="increment()">
+    <input type="button" class="bg-gray-500 text-white border-md px-2 py-1 rounded-md" value="Decrement" onclick="decrement()">
+
+    <script>
+        // function keyIN(){
+        //     console.log("you pressed a key")
+        // }
+        // function keyOut(){
+        //     console.log("you released a key")
+        // }
+        var count=0;
+        var countPara = document.getElementById('count');
+        function increment(){
+            count+=1;
+            countPara.innerHTML = `Count: ${count}`
+        }
+
+        function decrement(){
+            count-=1;
+            countPara.innerHTML = `Count: ${count}`
+        }
+
+        function clickMe(){
+            const nm = prompt("Enter your Gender")
+            console.log(nm)
+        }
+
+        function entr(){
+            console.log("enter")
+            const box = document.getElementById('box');
+            box.style.backgroundColor="gray";
+            box.style.color="white";
+            box.style.borderRadius="34px";
+        }
+
+        function leave(){
+            console.log("leave")
+            const box = document.getElementById('box');
+            box.style.backgroundColor="white";
+            box.style.color="black";
+            box.style.borderRadius="0px";
+        }
+
+
+
+
+        // function conf(){
+        //     confirm("Are you sure??")
+        // }
+
+        // conf();
+        // function alrt(){
+        //     window.alert("This is an alert")
+        // }
+        // alrt();
+
+        // function prmt(){
+        //     const name =window.prompt("Enter your name :")
+        //     console.log(name)
+        // }
+        // prmt();
+
+        const text = document.getElementById('para');
+        console.log(text.innerText)
+
+
+        const heading = document.getElementsByClassName('head');
+        // for (let i = 0; i < heading.length; i++) {
+        //     console.log(heading[i].innerText);
+        // }
+
+        const smallHeading = document.getElementsByTagName('h4')
+        // console.log(smallHeading)
+        // for (let i = 0; i < smallHeading.length; i++) {
+        //     console.log(smallHeading[i].innerText);
+        // }
+
+        const paragraphs = document.querySelector('.paragraph')
+        // console.log(paragraphs.innerText)
+        const paragraphsAll = document.querySelectorAll('.paragraph')
+        console.log(paragraphsAll)
+        for (let i = 0; i < paragraphsAll.length; i++) {
+            console.log(paragraphsAll[i].innerText);
+        }
+        
+
+
+
+    </script>
+</body>
+
+</html>
